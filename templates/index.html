@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flask App</title>
     <style>
+        /* General Styles */
         body, h1, p, form, input {
             margin: 0;
             padding: 0;
@@ -16,18 +17,46 @@
             background-color: #121212;
             color: #e0e0e0;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
             min-height: 100vh;
-            overflow: hidden;
         }
 
+        /* Navbar Styles */
+        .navbar {
+            background-color: #1e1e1e;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar h2 {
+            color: #ff9800;
+            margin: 0;
+            text-align: center;
+        }
+
+        .navbar nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ff9800;
+        }
+
+        /* Container Styles */
         .container {
             max-width: 800px;
             width: 100%;
             margin: 20px auto;
             padding: 30px;
-            background-colP0+r\P0+r\or: #1e1e1e;
+            background-color: #1e1e1e;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
             transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -53,6 +82,7 @@
             font-size: 1rem;
         }
 
+        /* Form Styles */
         form {
             display: flex;
             flex-direction: column;
@@ -81,7 +111,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease, box-shP0+r\P0+r\P0+r\P0+r\P0+r\adow 0.3s ease;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
             font-size: 16px;
         }
 
@@ -96,6 +126,16 @@
             box-shadow: none;
         }
 
+        /* Footer Styles */
+        footer {
+            background-color: #1e1e1e;
+            padding: 10px;
+            text-align: center;
+            color: #ccc;
+            margin-top: auto;
+        }
+
+        /* Media Queries */
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
@@ -118,6 +158,16 @@
 </head>
 
 <body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2>My Flask App</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
     <div class="container">
         <h1>Hello Dosto,<br>Let's make a 2 Tier Application with Flask and MYSQL!</h1>
         <div class="messages">
@@ -127,10 +177,15 @@
         </div>
 
         <form id="messageForm">
-            <input type="text" name="new_message" placeholder="Enter a new message">
+            <input type="text" name="new_message" placeholder="Enter a new message" required>
             <input type="submit" value="Submit">
         </form>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Flask App. All rights reserved.</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -164,4 +219,3 @@
 </body>
 
 </html>
-
